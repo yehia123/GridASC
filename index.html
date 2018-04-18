@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="./styles.css">
+  <title>ASC Recycling</title>
+</head>
+
+<body>
+<!-- Main wrapper  -->
+  <div class="wrapper">
+
+    <!-- Top elements of the website, Grid row format to display the images on top of background-->
+    <div class="top">
+        <nav class="menu">
+            <button aria-expanded="false" aria-controls="menu-list">
+              <span class="open">☰</span>
+              <span class="close">×</span>
+              Menu
+            </button>
+            <ul id="menu-list">
+              <li>
+                <a href="#spot">Home</a>
+              </li>
+              <li>
+                <a href="#contact">Contact Us</a>
+              </li>
+              <li>
+                <a href="#prod">Product Gallery</a>
+              </li>
+            </ul>
+        </nav>
+      <div class="hero" id = "spot">
+        <h1>ASC Recycling</h1>
+        <a href="http://www.kitcometals.com/connecting.html">
+          <img src="http://www.kitconet.com/charts/metals/base/spot-copper-30d.gif" border="1" alt="[Most Recent Quotes from www.kitco.com]">
+        </a>
+        <a href="http://www.kitcometals.com/connecting.html">
+          <img class = "AL"src ="http://www.kitconet.com/charts/metals/base/aluminum-d.gif" border="0" alt="[Most Recent Quotes from www.kitco.com]">
+        </a>
+        <a href ="http://www.kitcometals.com/connecting.html">
+          <img src="http://www.kitconet.com/charts/metals/base/spot-nickel-30d.gif" border="1" alt="[Most Recent Quotes from www.kitco.com]">
+        </a>
+      </div>
+      <section class="gallery" id ="prod">
+          <h2>Product</h2>
+          <img class = "autoResizeImage" src="img/BARE.jpg" alt="">
+          <img class = "autoResizeImage" src="img/CU1.jpg"alt="">
+          <img class = "autoResizeImage" src="img/CU2.jpg" alt="">
+          <img class = "autoResizeImage" src="img/CABLE.jpg" alt="">
+          <img class = "autoResizeImage" src="img/HOUSEWIRE.jpg" alt="">
+          <img class = "autoResizeImage" src="img/FLEXWIRE.jpg" alt="">
+          <img class = "autoResizeImage" src="img/WIRE.jpg" alt="">
+          <img class = "autoResizeImage" src="img/CAT.jpg" alt="">
+          <img class = "autoResizeImage" src="img/ROMEX.jpg" alt="">
+          <img class = "autoResizeImage" src="img/IRONYBRASS.jpg" alt="">
+          <img class = "autoResizeImage" src="img/BRASS.jpg" alt="">
+          <img class = "autoResizeImage" src="img/SS.jpg" alt="">
+          <img class = "autoResizeImage" src="img/AL6063.jpg" alt="">
+          <img class = "autoResizeImage" src="img/PAINTED6063.jpg" alt="">
+          <img class = "autoResizeImage" src="img/RIMS.jpg" alt="">
+          <img class = "autoResizeImage" src="img/5051.jpg" alt="">
+          <img class = "autoResizeImage" src="img/OS.jpg" alt="">
+          <img class = "autoResizeImage" src="img/AL3.jpg" alt="">
+        </section>
+      <div class="cta cta1" id ="contact">
+        <!-- cta1 grid with google maps  -->
+        <div id = "googleMap" style="width:200px;height:200px; border:5px inset rgb(145, 128, 128);"><p class="price">Location</p></div>
+        <div class="contact_details">
+        <h1>Business Hours</h1>
+        <p>Monday-Friday: 8:00 AM - 4:30 PM</p>
+        <p>Saturday: 8:00 AM - 12:00 PM</p>
+        <h1>Contact Number</h1>
+        <p>Office: 1-408-280-2888</p>
+        <p>Cell: 1-408-460-4633</p>
+        </div>                
+      </div>
+
+    <!--
+    <section class="gallery" id ="prod">
+      <h2>Product</h2>
+      <img class = "autoResizeImage" src="img/BARE.jpg" alt="">
+      <img class = "autoResizeImage" src="img/CU1.jpg"alt="">
+      <img class = "autoResizeImage" src="img/CU2.jpg" alt="">
+      <img class = "autoResizeImage" src="img/HOUSEWIRE.jpg" alt="">
+      <img class = "autoResizeImage" src="img/FLEXWIRE.jpg" alt="">
+      <img class = "autoResizeImage" src="img/WIRE.jpg" alt="">
+      <img class = "autoResizeImage" src="img/CAT.jpg" alt="">
+      <img class = "autoResizeImage" src="img/ROMEX.jpg" alt="">
+      <img class = "autoResizeImage" src="img/IRONYBRASS.jpg" alt="">
+      <img class = "autoResizeImage" src="img/BRASS.jpg" alt="">
+      <img class = "autoResizeImage" src="img/SS.jpg" alt="">
+      <img class = "autoResizeImage" src="img/AL6063.jpg" alt="">
+      <img class = "autoResizeImage" src="img/PAINTED6063.jpg" alt="">
+      <img class = "autoResizeImage" src="img/RIMS.jpg" alt="">
+      <img class = "autoResizeImage" src="img/5051.jpg" alt="">
+      <img class = "autoResizeImage" src="img/OS.jpg" alt="">
+      <img class = "autoResizeImage" src="img/AL3.jpg" alt="">
+
+    </section>-->
+  </div>
+</div>
+  <script>
+      function myMap() {
+      var mapProp= {
+          center: new google.maps.LatLng(37.3071,-121.8643),
+          zoom: 13,
+      };
+      var myLatLng = {lat: 37.3071, lng: -121.8643};
+
+      var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+      var marker = new google.maps.Marker({
+          center: myLatLng,
+          map:map
+      });
+      var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+        });
+    }
+    
+    const navButton = document.querySelector('button[aria-expanded]');
+
+    function toggleNav({ target }) {
+      const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+      console.log(expanded);
+      navButton.setAttribute('aria-expanded', !expanded);
+    }
+
+    navButton.addEventListener('click', toggleNav);
+
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvwEH4nVxICxfXBCs93p4-7CojbakPD4k&callback=myMap"></script>
+</body>
+
+</html>
